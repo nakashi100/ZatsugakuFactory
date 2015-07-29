@@ -9,11 +9,42 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    var pageMenu : CAPSPageMenu?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Array to keep track of controllers in page menu
+        var controllerArray : [UIViewController] = []
+        
+        var categoryArray : Array = ["ALL", "エンタメ", "生活・健康", "歴史・文化", "生物・自然", "科学・技術", "スポーツ・趣味", "ビジネス・経済", "その他雑学"]
 
-        // Do any additional setup after loading the view.
+
+        for i in 0...(categoryArray.count-1) {
+            var ZatsugakuListVC : UIViewController = storyboard!.instantiateViewControllerWithIdentifier("ZatsugakuListVC") as! ZatsugakuListViewController
+            ZatsugakuListVC.title = categoryArray[i]
+            controllerArray.append(ZatsugakuListVC)
+        }
+
+        
+        // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
+        var parameters: [CAPSPageMenuOption] = [
+            .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
+            .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
+            .SelectionIndicatorColor(UIColor.orangeColor()),
+            .BottomMenuHairlineColor(UIColor(red: 70.0/255.0, green: 70.0/255.0, blue: 80.0/255.0, alpha: 1.0)),
+            .MenuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
+            .MenuHeight(40.0),
+            .MenuItemWidth(90.0),
+            .CenterMenuItems(true)
+        ]
+        
+        // Initialize scroll menu
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 60.0, self.view.frame.width, self.view.frame.height - 60.0), pageMenuOptions: parameters)
+        
+        self.view.addSubview(pageMenu!.view)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +53,5 @@ class HomeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

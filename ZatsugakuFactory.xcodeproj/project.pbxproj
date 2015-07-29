@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C405DA881B6896AB00ABD636 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C405DA7E1B6896AB00ABD636 /* CAPSPageMenu.swift */; };
+		C405DA891B6896AB00ABD636 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C405DA7F1B6896AB00ABD636 /* Info.plist */; };
+		C405DA8A1B6896AB00ABD636 /* PageMenu.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = C405DA801B6896AB00ABD636 /* PageMenu.modulemap */; };
+		C405DA8B1B6896AB00ABD636 /* PageMenu.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C405DA811B6896AB00ABD636 /* PageMenu.xcconfig */; };
+		C405DA8C1B6896AB00ABD636 /* PageMenu-Private.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C405DA821B6896AB00ABD636 /* PageMenu-Private.xcconfig */; };
+		C405DA8D1B6896AB00ABD636 /* PageMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C405DA831B6896AB00ABD636 /* PageMenu-dummy.m */; };
+		C405DA911B689F7100ABD636 /* ZatsugakuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C405DA901B689F7100ABD636 /* ZatsugakuListViewController.swift */; };
 		C452EC071B688CA7001B3053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452EC061B688CA7001B3053 /* AppDelegate.swift */; };
 		C452EC0E1B688CA7001B3053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C452EC0C1B688CA7001B3053 /* Main.storyboard */; };
 		C452EC101B688CA7001B3053 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C452EC0F1B688CA7001B3053 /* Images.xcassets */; };
@@ -30,6 +37,15 @@
 /* Begin PBXFileReference section */
 		24DDC3B397064CE24892C76A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		584E72E67890DED2E0579FF0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C405DA7E1B6896AB00ABD636 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CAPSPageMenu.swift; path = Classes/CAPSPageMenu.swift; sourceTree = "<group>"; };
+		C405DA7F1B6896AB00ABD636 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C405DA801B6896AB00ABD636 /* PageMenu.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = PageMenu.modulemap; sourceTree = "<group>"; };
+		C405DA811B6896AB00ABD636 /* PageMenu.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = PageMenu.xcconfig; sourceTree = "<group>"; };
+		C405DA821B6896AB00ABD636 /* PageMenu-Private.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "PageMenu-Private.xcconfig"; sourceTree = "<group>"; };
+		C405DA831B6896AB00ABD636 /* PageMenu-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PageMenu-dummy.m"; sourceTree = "<group>"; };
+		C405DA841B6896AB00ABD636 /* PageMenu-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PageMenu-prefix.pch"; sourceTree = "<group>"; };
+		C405DA851B6896AB00ABD636 /* PageMenu-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PageMenu-umbrella.h"; sourceTree = "<group>"; };
+		C405DA901B689F7100ABD636 /* ZatsugakuListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZatsugakuListViewController.swift; sourceTree = "<group>"; };
 		C452EC011B688CA7001B3053 /* ZatsugakuFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZatsugakuFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C452EC051B688CA7001B3053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C452EC061B688CA7001B3053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +88,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C405DA861B6896AB00ABD636 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C405DA7F1B6896AB00ABD636 /* Info.plist */,
+				C405DA801B6896AB00ABD636 /* PageMenu.modulemap */,
+				C405DA811B6896AB00ABD636 /* PageMenu.xcconfig */,
+				C405DA821B6896AB00ABD636 /* PageMenu-Private.xcconfig */,
+				C405DA831B6896AB00ABD636 /* PageMenu-dummy.m */,
+				C405DA841B6896AB00ABD636 /* PageMenu-prefix.pch */,
+				C405DA851B6896AB00ABD636 /* PageMenu-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PageMenu";
+			sourceTree = "<group>";
+		};
+		C405DA871B6896AB00ABD636 /* PageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C405DA7E1B6896AB00ABD636 /* CAPSPageMenu.swift */,
+				C405DA861B6896AB00ABD636 /* Support Files */,
+			);
+			name = PageMenu;
+			path = ../Pods/PageMenu;
+			sourceTree = "<group>";
+		};
 		C452EBF81B688CA7001B3053 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +140,10 @@
 				C452EC061B688CA7001B3053 /* AppDelegate.swift */,
 				C452EC281B688E28001B3053 /* HomeViewController.swift */,
 				C452EC2A1B688EBE001B3053 /* MyPageViewController.swift */,
+				C405DA901B689F7100ABD636 /* ZatsugakuListViewController.swift */,
 				C452EC0F1B688CA7001B3053 /* Images.xcassets */,
 				C452EC111B688CA7001B3053 /* LaunchScreen.xib */,
+				C405DA871B6896AB00ABD636 /* PageMenu */,
 				C452EC041B688CA7001B3053 /* Supporting Files */,
 			);
 			path = ZatsugakuFactory;
@@ -222,8 +265,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C405DA891B6896AB00ABD636 /* Info.plist in Resources */,
 				C452EC0E1B688CA7001B3053 /* Main.storyboard in Resources */,
 				C452EC131B688CA7001B3053 /* LaunchScreen.xib in Resources */,
+				C405DA8B1B6896AB00ABD636 /* PageMenu.xcconfig in Resources */,
+				C405DA8C1B6896AB00ABD636 /* PageMenu-Private.xcconfig in Resources */,
 				C452EC101B688CA7001B3053 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,8 +336,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C405DA911B689F7100ABD636 /* ZatsugakuListViewController.swift in Sources */,
 				C452EC071B688CA7001B3053 /* AppDelegate.swift in Sources */,
 				C452EC2B1B688EBE001B3053 /* MyPageViewController.swift in Sources */,
+				C405DA8A1B6896AB00ABD636 /* PageMenu.modulemap in Sources */,
+				C405DA881B6896AB00ABD636 /* CAPSPageMenu.swift in Sources */,
+				C405DA8D1B6896AB00ABD636 /* PageMenu-dummy.m in Sources */,
 				C452EC291B688E28001B3053 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
