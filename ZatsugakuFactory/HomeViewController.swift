@@ -15,20 +15,19 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Array to keep track of controllers in page menu
-        var controllerArray : [UIViewController] = []
-        
         var categoryArray : Array = ["ALL", "エンタメ", "生活・健康", "歴史・文化", "生物・自然", "科学・技術", "スポーツ・趣味", "ビジネス・経済", "その他雑学"]
+        
+        // PageMenuの中に入れるControllerの配列
+        var controllerArray : [UIViewController] = []
 
-
+        // カテゴリ毎にControllerを複製する
         for i in 0...(categoryArray.count-1) {
-            var ZatsugakuListVC : UIViewController = storyboard!.instantiateViewControllerWithIdentifier("ZatsugakuListVC") as! ZatsugakuListViewController
+             var ZatsugakuListVC : UIViewController = storyboard!.instantiateViewControllerWithIdentifier("zatsugakuListVC") as! ZatsugakuListViewController
             ZatsugakuListVC.title = categoryArray[i]
             controllerArray.append(ZatsugakuListVC)
         }
 
-        
-        // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
+        // PageMenuをカスタマイズする
         var parameters: [CAPSPageMenuOption] = [
             .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
             .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
@@ -40,18 +39,17 @@ class HomeViewController: UIViewController {
             .CenterMenuItems(true)
         ]
         
-        // Initialize scroll menu
+        // スクロールメニューをInitializeする
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 60.0, self.view.frame.width, self.view.frame.height - 60.0), pageMenuOptions: parameters)
         
         self.view.addSubview(pageMenu!.view)
         
     }
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-
 }

@@ -26,7 +26,7 @@
         <!--Zatsugaku List-->
         <scene sceneID="7pN-LU-Fci">
             <objects>
-                <viewController storyboardIdentifier="ZatsugakuListVC" title="Zatsugaku List" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SB3-vI-1CT" customClass="ZatsugakuListViewController" customModule="ZatsugakuFactory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="zatsugakuListVC" title="Zatsugaku List" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SB3-vI-1CT" customClass="ZatsugakuListViewController" customModule="ZatsugakuFactory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j8r-yA-MB2"/>
                         <viewControllerLayoutGuide type="bottom" id="jfs-yc-Qbr"/>
@@ -35,18 +35,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Lom-nC-JAl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Lom-nC-JAl">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Dyj-3I-L1H">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="zatsugakuCell" rowHeight="95" id="Dyj-3I-L1H" customClass="ZatsugakuTableViewCell" customModule="ZatsugakuFactory" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dyj-3I-L1H" id="JGH-50-yhi">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIZ-5A-led">
+                                                    <rect key="frame" x="49" y="36" width="283" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="MIZ-5A-led" id="bcY-0K-VnU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="SB3-vI-1CT" id="VJv-9t-6oG"/>
+                                    <outlet property="delegate" destination="SB3-vI-1CT" id="FuX-0H-x4c"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

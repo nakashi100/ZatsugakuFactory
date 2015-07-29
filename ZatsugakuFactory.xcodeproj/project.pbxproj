@@ -14,6 +14,7 @@
 		C405DA8C1B6896AB00ABD636 /* PageMenu-Private.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C405DA821B6896AB00ABD636 /* PageMenu-Private.xcconfig */; };
 		C405DA8D1B6896AB00ABD636 /* PageMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C405DA831B6896AB00ABD636 /* PageMenu-dummy.m */; };
 		C405DA911B689F7100ABD636 /* ZatsugakuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C405DA901B689F7100ABD636 /* ZatsugakuListViewController.swift */; };
+		C405DAA71B68B5D500ABD636 /* ZatsugakuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C405DAA61B68B5D500ABD636 /* ZatsugakuTableViewCell.swift */; };
 		C452EC071B688CA7001B3053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452EC061B688CA7001B3053 /* AppDelegate.swift */; };
 		C452EC0E1B688CA7001B3053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C452EC0C1B688CA7001B3053 /* Main.storyboard */; };
 		C452EC101B688CA7001B3053 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C452EC0F1B688CA7001B3053 /* Images.xcassets */; };
@@ -46,6 +47,7 @@
 		C405DA841B6896AB00ABD636 /* PageMenu-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PageMenu-prefix.pch"; sourceTree = "<group>"; };
 		C405DA851B6896AB00ABD636 /* PageMenu-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PageMenu-umbrella.h"; sourceTree = "<group>"; };
 		C405DA901B689F7100ABD636 /* ZatsugakuListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZatsugakuListViewController.swift; sourceTree = "<group>"; };
+		C405DAA61B68B5D500ABD636 /* ZatsugakuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZatsugakuTableViewCell.swift; path = ../ZatsugakuTableViewCell.swift; sourceTree = "<group>"; };
 		C452EC011B688CA7001B3053 /* ZatsugakuFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZatsugakuFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C452EC051B688CA7001B3053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C452EC061B688CA7001B3053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				C452EC281B688E28001B3053 /* HomeViewController.swift */,
 				C452EC2A1B688EBE001B3053 /* MyPageViewController.swift */,
 				C405DA901B689F7100ABD636 /* ZatsugakuListViewController.swift */,
+				C405DAA61B68B5D500ABD636 /* ZatsugakuTableViewCell.swift */,
 				C452EC0F1B688CA7001B3053 /* Images.xcassets */,
 				C452EC111B688CA7001B3053 /* LaunchScreen.xib */,
 				C405DA871B6896AB00ABD636 /* PageMenu */,
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C405DA911B689F7100ABD636 /* ZatsugakuListViewController.swift in Sources */,
+				C405DAA71B68B5D500ABD636 /* ZatsugakuTableViewCell.swift in Sources */,
 				C452EC071B688CA7001B3053 /* AppDelegate.swift in Sources */,
 				C452EC2B1B688EBE001B3053 /* MyPageViewController.swift in Sources */,
 				C405DA8A1B6896AB00ABD636 /* PageMenu.modulemap in Sources */,
