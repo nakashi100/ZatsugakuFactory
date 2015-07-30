@@ -7,26 +7,36 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class HomeViewController: UIViewController {
     
     var pageMenu : CAPSPageMenu?
+    var articlesJson : JSON = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        createPageMenu()
+        getArticlesJson()
+        
+    }
+
+    // PageMenuを作成するメソッド
+    func createPageMenu() {
         var categoryArray : Array = ["ALL", "エンタメ", "生活・健康", "歴史・文化", "生物・自然", "科学・技術", "スポーツ・趣味", "ビジネス・経済", "その他雑学"]
         
         // PageMenuの中に入れるControllerの配列
         var controllerArray : [UIViewController] = []
-
+        
         // カテゴリ毎にControllerを複製する
         for i in 0...(categoryArray.count-1) {
-             var ZatsugakuListVC : UIViewController = storyboard!.instantiateViewControllerWithIdentifier("zatsugakuListVC") as! ZatsugakuListViewController
+            var ZatsugakuListVC : UIViewController = storyboard!.instantiateViewControllerWithIdentifier("zatsugakuListVC") as! ZatsugakuListViewController
             ZatsugakuListVC.title = categoryArray[i]
             controllerArray.append(ZatsugakuListVC)
         }
-
+        
         // PageMenuをカスタマイズする
         var parameters: [CAPSPageMenuOption] = [
             .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
@@ -43,10 +53,30 @@ class HomeViewController: UIViewController {
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 60.0, self.view.frame.width, self.view.frame.height - 60.0), pageMenuOptions: parameters)
         
         self.view.addSubview(pageMenu!.view)
-        
     }
     
     
+    // データをjson形式で取得するメソッド
+    func getArticlesJson() {
+        Alamofire.request(.GET, "http://192.168.33.13/zatsugaku_platform/Articles/json_data") // あとで本番環境のURLに変更する
+            .responseJSON { (request, response, json, error) in
+            
+                if(error != nil) {
+                    println("失敗しました")
+                } else {
+                    self.articlesJson = JSON(json!) // あとでAppDelegateに持たせる
+                    
+                    // 出力テスト
+                    // for (key: String, subJson: JSON) in self.articlesJson {
+                    //    let id = subJson["id"]
+                    //    let title = subJson["title"]
+                    //    let userName = subJson["userName"]
+                    //    println("\(id)--\(title)--\(userName)")
+                    // }
+                }
+        
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
