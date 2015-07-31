@@ -7,20 +7,18 @@
 //
 
 import UIKit
-import Alamofire
 import SwiftyJSON
 
 class HomeViewController: UIViewController {
     
     var pageMenu : CAPSPageMenu?
-    var articlesJson : JSON = []
-
+    // var appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate //AppDelegateのインスタンスを取得
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         createPageMenu()
-        getArticlesJson()
-        
     }
 
     // PageMenuを作成するメソッド
@@ -32,8 +30,9 @@ class HomeViewController: UIViewController {
         
         // カテゴリ毎にControllerを複製する
         for i in 0...(categoryArray.count-1) {
-            var ZatsugakuListVC : UIViewController = storyboard!.instantiateViewControllerWithIdentifier("zatsugakuListVC") as! ZatsugakuListViewController
+            var ZatsugakuListVC : ZatsugakuListViewController = storyboard!.instantiateViewControllerWithIdentifier("zatsugakuListVC") as! ZatsugakuListViewController
             ZatsugakuListVC.title = categoryArray[i]
+            ZatsugakuListVC.categoryId = i
             controllerArray.append(ZatsugakuListVC)
         }
         
@@ -55,31 +54,9 @@ class HomeViewController: UIViewController {
         self.view.addSubview(pageMenu!.view)
     }
     
-    
-    // データをjson形式で取得するメソッド
-    func getArticlesJson() {
-        Alamofire.request(.GET, "http://192.168.33.13/zatsugaku_platform/Articles/json_data") // あとで本番環境のURLに変更する
-            .responseJSON { (request, response, json, error) in
-            
-                if(error != nil) {
-                    println("失敗しました")
-                } else {
-                    self.articlesJson = JSON(json!) // あとでAppDelegateに持たせる
-                    
-                    // 出力テスト
-                    // for (key: String, subJson: JSON) in self.articlesJson {
-                    //    let id = subJson["id"]
-                    //    let title = subJson["title"]
-                    //    let userName = subJson["userName"]
-                    //    println("\(id)--\(title)--\(userName)")
-                    // }
-                }
-        
-        }
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 }

@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ZatsugakuTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var pageViewsLabel: UILabel!
+    @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
     
     
     override func awakeFromNib() {
@@ -24,9 +29,13 @@ class ZatsugakuTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func setData(indexPath: NSIndexPath, title: String) {
-        var row = indexPath.row
-        
-        titleLabel.text = "\(title)の\(row)番目の雑学"
+    func setData(category: String, title: String, pageViews: String, likes: String, userName: String) {
+        self.categoryLabel.text = category
+        self.titleLabel.text = title
+        self.pageViewsLabel.text = pageViews
+        self.likesLabel.text = likes
+        self.userNameLabel.text = userName
     }
+
+    
 }
