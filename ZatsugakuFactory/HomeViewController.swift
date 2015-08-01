@@ -7,36 +7,37 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class HomeViewController: UIViewController {
     
     var pageMenu : CAPSPageMenu?
-    // var appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate //AppDelegateのインスタンスを取得
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "雑学ファクトリー"
         createPageMenu()
     }
 
+    
     // PageMenuを作成するメソッド
     func createPageMenu() {
         var categoryArray : Array = ["ALL", "エンタメ", "生活・健康", "歴史・文化", "生物・自然", "科学・技術", "スポーツ・趣味", "ビジネス・経済", "その他雑学"]
         
-        // PageMenuの中に入れるControllerの配列
+        // Initialize view controllers to display and place in array
         var controllerArray : [UIViewController] = []
-        
-        // カテゴリ毎にControllerを複製する
+
         for i in 0...(categoryArray.count-1) {
-            var ZatsugakuListVC : ZatsugakuListViewController = storyboard!.instantiateViewControllerWithIdentifier("zatsugakuListVC") as! ZatsugakuListViewController
-            ZatsugakuListVC.title = categoryArray[i]
-            ZatsugakuListVC.categoryId = i
-            controllerArray.append(ZatsugakuListVC)
+            var zatsugakuTableVC : ZatsugakuTableViewController = ZatsugakuTableViewController(nibName: "ZatsugakuTableViewController", bundle: nil)
+            // var zatsugakuTableVC = ZatsugakuTableViewController()
+            zatsugakuTableVC.parentNavigationController = self.navigationController
+            zatsugakuTableVC.title = categoryArray[i]
+            zatsugakuTableVC.categoryId = i
+            controllerArray.append(zatsugakuTableVC)
         }
+
         
-        // PageMenuをカスタマイズする
+        // Customize menu (Optional)
         var parameters: [CAPSPageMenuOption] = [
             .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
             .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
@@ -48,7 +49,7 @@ class HomeViewController: UIViewController {
             .CenterMenuItems(true)
         ]
         
-        // スクロールメニューをInitializeする
+        // Initialize scroll menu
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 60.0, self.view.frame.width, self.view.frame.height - 60.0), pageMenuOptions: parameters)
         
         self.view.addSubview(pageMenu!.view)

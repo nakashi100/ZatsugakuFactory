@@ -1,18 +1,17 @@
 //
-//  ZatsugakuTableViewCell.swift
+//  ZatsugakuCustomCell.swift
 //  ZatsugakuFactory
 //
-//  Created by Tomohide Nakashima on 2015/07/29.
+//  Created by Tomohide Nakashima on 2015/07/31.
 //  Copyright (c) 2015年 Tomohide Nakahsima. All rights reserved.
 //
 
 import UIKit
-import SwiftyJSON
 
-class ZatsugakuTableViewCell: UITableViewCell {
+class ZatsugakuCustomCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var pageViewsLabel: UILabel!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -28,7 +27,7 @@ class ZatsugakuTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
     func setData(category: String, title: String, pageViews: String, likes: String, userName: String) {
         self.categoryLabel.text = category
         self.titleLabel.text = title
@@ -36,6 +35,5 @@ class ZatsugakuTableViewCell: UITableViewCell {
         self.likesLabel.text = likes
         self.userNameLabel.text = userName
     }
-
     
 }
