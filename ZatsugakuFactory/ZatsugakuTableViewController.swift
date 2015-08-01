@@ -70,27 +70,17 @@ class ZatsugakuTableViewController: UITableViewController {
     // セルが選択されたとき
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        println("くりっくされたよ")
         var row = indexPath.row
-
-////        var articleDetailVC : ArticleDetailViewController = ArticleDetailViewController(nibName: "ArticleDetailViewontroller", bundle: nil)
-//        
-//        var articleDetailVC1 : ArticleDetailViewController = ArticleDetailViewController()
-//        articleDetailVC1.title = self.articlesJson[row]["title"].stringValue
-//
-//        parentNavigationController!.pushViewController(articleDetailVC1, animated: true)
+        var articleDetailVC : ArticleDetailViewController = ArticleDetailViewController(nibName: "ArticleDetailViewController", bundle: nil)
         
+        articleDetailVC.title = self.articlesJson[row]["title"].stringValue
+        articleDetailVC.articleTitle = self.articlesJson[row]["title"].stringValue
+        articleDetailVC.pageViews = self.articlesJson[row]["pageviews"].stringValue
+        articleDetailVC.likes = self.articlesJson[row]["likes"].stringValue
+        articleDetailVC.userName = self.articlesJson[row]["userName"].stringValue
+        articleDetailVC.detail = self.articlesJson[row]["detail"].stringValue
         
-        
-//        var zatsugakuTableVC : ZatsugakuTableViewController = ZatsugakuTableViewController(nibName: "ZatsugakuTableViewController", bundle: nil)
-        
-        
-        var newVC : UIViewController = UIViewController()
-        newVC.view.backgroundColor = UIColor.blueColor()
-        newVC.title = self.articlesJson[row]["title"].stringValue
-        parentNavigationController!.pushViewController(newVC, animated: true)
-
-    
+        self.parentNavigationController!.pushViewController(articleDetailVC, animated: true)
     }
     
     
