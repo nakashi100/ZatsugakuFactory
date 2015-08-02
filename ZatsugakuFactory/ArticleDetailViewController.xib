@@ -6,9 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticleDetailViewController" customModule="ZatsugakuFactory" customModuleProvider="target">
             <connections>
-                <outlet property="detailTextView" destination="AbS-Ye-lvV" id="ntk-gp-H8o"/>
+                <outlet property="detailLabel" destination="bQm-al-U2d" id="VaG-2u-8Z0"/>
                 <outlet property="likesLabel" destination="qkv-XA-6sc" id="TRq-gr-MaT"/>
                 <outlet property="pageViewsLabel" destination="qER-gf-TJv" id="Hby-48-olQ"/>
+                <outlet property="testView" destination="jTn-Nd-s5u" id="I9b-TI-Jnv"/>
                 <outlet property="titleLabel" destination="gif-t6-qTo" id="793-ld-G42"/>
                 <outlet property="userImage" destination="YP6-t7-fft" id="ATn-JF-KbP"/>
                 <outlet property="userNameLabel" destination="kQd-eV-vro" id="ePr-Tz-Vl5"/>
@@ -48,8 +49,21 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AbS-Ye-lvV">
-                    <rect key="frame" x="27" y="220" width="326" height="310"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQm-al-U2d">
+                    <rect key="frame" x="34" y="220" width="306" height="36"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Label">
+                            <attributes>
+                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jTn-Nd-s5u">
+                    <rect key="frame" x="56" y="462" width="240" height="51"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

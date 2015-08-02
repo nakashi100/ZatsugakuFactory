@@ -48,7 +48,7 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
             .ViewBackgroundColor(UIColor(red: 85.0/255.0, green: 71.0/255.0, blue: 56.0/255.0, alpha: 1.0)),
             .SelectionIndicatorColor(UIColor(red: 211.0/255.0, green: 163.0/255.0, blue: 81.0/255.0, alpha: 1.0)),
             .BottomMenuHairlineColor(UIColor(red: 85.0/255.0, green: 71.0/255.0, blue: 56.0/255.0, alpha: 1.0)),
-            .MenuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
+            .MenuItemFont(UIFont(name: "HelveticaNeue", size: 12.0)!),
             .MenuHeight(30.0),
             .MenuItemWidth(90.0),
             .CenterMenuItems(true),

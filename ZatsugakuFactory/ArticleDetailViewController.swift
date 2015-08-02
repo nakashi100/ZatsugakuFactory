@@ -15,7 +15,10 @@ class ArticleDetailViewController: UIViewController {
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var detailTextView: UITextView!
+    @IBOutlet weak var detailLabel: UILabel!
+    
+    @IBOutlet weak var testView: UITextView!
+
     
     var articleTitle: String?
     var pageViews: String?
@@ -30,7 +33,15 @@ class ArticleDetailViewController: UIViewController {
         self.pageViewsLabel.text = self.pageViews!
         self.likesLabel.text = self.likes!
         self.userNameLabel.text = self.userName!
-        self.detailTextView.text = self.detail!
+        self.detailLabel.text = self.detail!
+        self.testView.text = self.detail!
+        
+        // 高さを0にする
+        
+        // 行数無制限
+        self.detailLabel.numberOfLines = 0
+        // サイズを自動調整
+        self.detailLabel.sizeToFit()
         
     }
 

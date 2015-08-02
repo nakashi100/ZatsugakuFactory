@@ -15,14 +15,19 @@ class ZatsugakuCustomCell: UITableViewCell {
     @IBOutlet weak var pageViewsLabel: UILabel!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
-    
+    @IBOutlet weak var cellView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-//        self.categoryLabel.backgroundColor = UIColor(red: 211.0/255.0, green: 163.0/255.0, blue: 81.0/255.0, alpha: 1.0)
-//        self.titleLabel.font = UIFont(name: "Helvetica-bold", size: 14)
+        // UIに角丸を適用する
+        self.categoryLabel.layer.cornerRadius = 3
+        self.categoryLabel.layer.masksToBounds = true
+        
+        self.cellView.layer.cornerRadius = 5
+        self.cellView.layer.masksToBounds = true
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -34,8 +39,8 @@ class ZatsugakuCustomCell: UITableViewCell {
     func setData(category: String, title: String, pageViews: String, likes: String, userName: String) {
         self.categoryLabel.text = category
         self.titleLabel.text = title
-        self.pageViewsLabel.text = pageViews
-        self.likesLabel.text = likes
+        self.pageViewsLabel.text = pageViews + "views"
+        self.likesLabel.text = likes + "へぇ"
         self.userNameLabel.text = userName
     }
     
