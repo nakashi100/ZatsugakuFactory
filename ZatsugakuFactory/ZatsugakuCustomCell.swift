@@ -20,6 +20,9 @@ class ZatsugakuCustomCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+//        self.categoryLabel.backgroundColor = UIColor(red: 211.0/255.0, green: 163.0/255.0, blue: 81.0/255.0, alpha: 1.0)
+//        self.titleLabel.font = UIFont(name: "Helvetica-bold", size: 14)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -35,5 +38,7 @@ class ZatsugakuCustomCell: UITableViewCell {
         self.likesLabel.text = likes
         self.userNameLabel.text = userName
     }
+    
+    
     
 }

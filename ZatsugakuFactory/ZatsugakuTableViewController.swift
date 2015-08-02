@@ -28,6 +28,9 @@ class ZatsugakuTableViewController: UITableViewController {
         var nib:UINib = UINib(nibName: "ZatsugakuCustomCell", bundle: nil)
         self.tableView.registerNib(nib, forCellReuseIdentifier: "myCell")
         
+        self.tableView.separatorColor = UIColor.clearColor() // tableViewの下線を消す
+        self.tableView.backgroundColor = UIColor(red: 241.0/255.0, green: 240.0/255.0, blue: 230.0/255.0, alpha: 1.0)
+        
         getArticlesJson()
         refresh()
     }

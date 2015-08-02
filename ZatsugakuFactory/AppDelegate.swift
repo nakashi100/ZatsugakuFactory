@@ -26,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.mainScreen().bounds.size.width, height: 20.0))
         view.backgroundColor = UIColor(red: 85.0/255.0, green: 71.0/255.0, blue: 56.0/255.0, alpha: 1.0)
         self.window!.rootViewController!.view.addSubview(view)
-        // 画面上部のキャリアなどが表示されるステータスバーの文字色
-        // info.plistで”View controller-based status bar”をNOにセットする必要あり
+        
+        // ステータスバーの文字色を変更(info.plistで”View controller-based status bar”をNOにセットする必要あり)
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         
         
@@ -39,10 +39,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         // ナビゲーションバーのタイトル文字色
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+
         // TabBarItemのアイコンの色
-        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        UITabBar.appearance().tintColor = UIColor(red: 85.0/255.0, green: 71.0/255.0, blue: 56.0/255.0, alpha: 1.0)
         
         
+        // フォントを一括変更
+//        UILabel.appearance().font = UIFont(name: "Helvetica", size: 14.0)
         
         
         return true

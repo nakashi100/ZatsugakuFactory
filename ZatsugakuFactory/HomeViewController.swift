@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, CAPSPageMenuDelegate {
     
     var pageMenu : CAPSPageMenu?
     
@@ -19,6 +19,11 @@ class HomeViewController: UIViewController {
         createPageMenu()
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     
     // PageMenuを作成するメソッド
     func createPageMenu() {
@@ -42,24 +47,23 @@ class HomeViewController: UIViewController {
             .ScrollMenuBackgroundColor(UIColor(red: 85.0/255.0, green: 71.0/255.0, blue: 56.0/255.0, alpha: 1.0)),
             .ViewBackgroundColor(UIColor(red: 85.0/255.0, green: 71.0/255.0, blue: 56.0/255.0, alpha: 1.0)),
             .SelectionIndicatorColor(UIColor(red: 211.0/255.0, green: 163.0/255.0, blue: 81.0/255.0, alpha: 1.0)),
-            .BottomMenuHairlineColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
+            .BottomMenuHairlineColor(UIColor(red: 85.0/255.0, green: 71.0/255.0, blue: 56.0/255.0, alpha: 1.0)),
             .MenuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
-            .MenuHeight(40.0),
+            .MenuHeight(30.0),
             .MenuItemWidth(90.0),
-            .CenterMenuItems(true)
+            .CenterMenuItems(true),
             
-//            .UnselectedMenuItemLabelColor(UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.4)),
+            .UnselectedMenuItemLabelColor(UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.4)),
         ]
         
         // Initialize scroll menu
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 60.0, self.view.frame.width, self.view.frame.height - 60.0), pageMenuOptions: parameters)
         
+        // Optional delegate
+        pageMenu!.delegate = self
+        
         self.view.addSubview(pageMenu!.view)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
 }
