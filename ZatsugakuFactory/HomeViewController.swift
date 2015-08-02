@@ -39,14 +39,16 @@ class HomeViewController: UIViewController {
         
         // Customize menu (Optional)
         var parameters: [CAPSPageMenuOption] = [
-            .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
-            .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
-            .SelectionIndicatorColor(UIColor.orangeColor()),
-            .BottomMenuHairlineColor(UIColor(red: 70.0/255.0, green: 70.0/255.0, blue: 80.0/255.0, alpha: 1.0)),
+            .ScrollMenuBackgroundColor(UIColor(red: 85.0/255.0, green: 71.0/255.0, blue: 56.0/255.0, alpha: 1.0)),
+            .ViewBackgroundColor(UIColor(red: 85.0/255.0, green: 71.0/255.0, blue: 56.0/255.0, alpha: 1.0)),
+            .SelectionIndicatorColor(UIColor(red: 211.0/255.0, green: 163.0/255.0, blue: 81.0/255.0, alpha: 1.0)),
+            .BottomMenuHairlineColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
             .MenuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
             .MenuHeight(40.0),
             .MenuItemWidth(90.0),
             .CenterMenuItems(true)
+            
+//            .UnselectedMenuItemLabelColor(UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.4)),
         ]
         
         // Initialize scroll menu

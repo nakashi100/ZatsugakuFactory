@@ -16,6 +16,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+    
+
+        // ナビゲーションバーの下線を消すために空のUIImageを入れる
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        
+        // ステータスバーをカスタマイズする
+        let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.mainScreen().bounds.size.width, height: 20.0))
+        view.backgroundColor = UIColor(red: 85.0/255.0, green: 71.0/255.0, blue: 56.0/255.0, alpha: 1.0)
+        self.window!.rootViewController!.view.addSubview(view)
+        // 画面上部のキャリアなどが表示されるステータスバーの文字色
+        // info.plistで”View controller-based status bar”をNOにセットする必要あり
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        
+        
+        // ナビゲーションバーの色
+         UINavigationBar.appearance().barTintColor = UIColor(red: 85.0/255.0, green: 71.0/255.0, blue: 56.0/255.0, alpha: 1.0)
+        // ナビゲーションバーの背景色
+        UINavigationBar.appearance().backgroundColor = UIColor(red: 85.0/255.0, green: 71.0/255.0, blue: 56.0/255.0, alpha: 1.0)
+        // ナビゲーションバーボタンのベースの色（設定アイコンの色など）
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        // ナビゲーションバーのタイトル文字色
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        // TabBarItemのアイコンの色
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        
+        
+        
+        
         return true
     }
 

@@ -19,8 +19,7 @@ class ZatsugakuTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
-
-    
+    let refreshCL = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +29,7 @@ class ZatsugakuTableViewController: UITableViewController {
         self.tableView.registerNib(nib, forCellReuseIdentifier: "myCell")
         
         getArticlesJson()
+        refresh()
     }
 
     
@@ -95,6 +95,18 @@ class ZatsugakuTableViewController: UITableViewController {
                     self.articlesJson = JSON(json!)
                 }
         }
+    }
+    
+    // 引っ張ってロードするメソッド
+    func refresh() {
+        self.refreshCL.attributedTitle = NSAttributedString(string: "update")
+        self.refreshCL.addTarget(self, action: "refreshStart", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(self.refreshCL)
+    }
+    
+    func refreshStart() {
+        getArticlesJson()
+        self.refreshCL.endRefreshing()
     }
     
 }
