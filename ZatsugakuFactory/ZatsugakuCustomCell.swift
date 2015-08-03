@@ -39,7 +39,7 @@ class ZatsugakuCustomCell: UITableViewCell {
     func setData(category: String, title: String, pageViews: String, likes: String, userName: String) {
         self.categoryLabel.text = category
         self.titleLabel.text = title
-        self.pageViewsLabel.text = pageViews + "views"
+        self.pageViewsLabel.text = pageViews + "view"
         self.likesLabel.text = likes + "へぇ"
         self.userNameLabel.text = userName
     }
