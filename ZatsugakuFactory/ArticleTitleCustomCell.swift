@@ -1,5 +1,5 @@
 //
-//  ArticleDetailCustomCell.swift
+//  ArticleTitleCustomCell.swift
 //  ZatsugakuFactory
 //
 //  Created by Tomohide Nakashima on 2015/08/03.
@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ArticleDetailCustomCell: UITableViewCell {
+class ArticleTitleCustomCell: UITableViewCell {
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var pageViewsLabel: UILabel!
     
-    @IBOutlet weak var detailLabel: UILabel!
-
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

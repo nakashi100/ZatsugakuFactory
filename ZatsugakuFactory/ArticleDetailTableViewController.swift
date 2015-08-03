@@ -23,9 +23,11 @@ class ArticleDetailTableViewController: UITableViewController {
 
         
         // このviewで使えるnibを読み込む
-        var nib:UINib = UINib(nibName: "ArticleDetailCustomCell", bundle: nil)
-        self.tableView.registerNib(nib, forCellReuseIdentifier: "detailCell")
+        var nib1:UINib = UINib(nibName: "ArticleTitleCustomCell", bundle: nil)
+        self.tableView.registerNib(nib1, forCellReuseIdentifier: "titleCell")
         
+        var nib2:UINib = UINib(nibName: "ArticleDetailCustomCell", bundle: nil)
+        self.tableView.registerNib(nib2, forCellReuseIdentifier: "detailCell")
         
         // セルの高さを動的に変化させるための設定
         self.tableView.estimatedRowHeight = 10
@@ -34,7 +36,7 @@ class ArticleDetailTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Dispose of any resgources that can be recreated.
     }
 
 
@@ -43,20 +45,25 @@ class ArticleDetailTableViewController: UITableViewController {
 //    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath) as! ArticleDetailCustomCell
         var row = indexPath.row
         
-        cell.titleLabel.text = testArray[row]
-        cell.detailLabel.text = testArray[row]
-        cell.layoutIfNeeded()
+        if(row == 0){
+            
+            var cell = tableView.dequeueReusableCellWithIdentifier("titleCell", forIndexPath: indexPath) as! ArticleTitleCustomCell
+            cell.titleLabel.text = testArray[row]
+            cell.layoutIfNeeded()
+            return cell
+        }else{
+            var cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath) as! ArticleDetailCustomCell
+            cell.detailLabel.text = testArray[row]
+            cell.layoutIfNeeded()
+            return cell
+        }
         
-        return cell
     }
-    
-    
 }
