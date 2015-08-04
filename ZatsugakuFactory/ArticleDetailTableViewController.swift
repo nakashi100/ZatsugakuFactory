@@ -7,16 +7,11 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ArticleDetailTableViewController: UITableViewController {
     
-    var testArray = [
-        "私わたくしはその人を常に先生と呼んでいた。だからここでもただ先生と書くだけで本名は打ち明けない。",
-        "この書の世に出づるにいたりたるは、函館にある秦慶治氏、及び信濃にある神津猛氏のたまものなり。労作終るの日にあたりて、このものがたりを二人の恩人のまへにさゝぐ。",
-        "散文に二種あると考へてゐるが、一を小説、他を作文とかりに言つておく。",
-        "機敏な晩熟児といふべき此の男が、現に存するのだから僕は機敏な晩熟児が如何にして存るママかその様を語らうと思ふ。"
-    ]
-    
+    var articleJson : JSON = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +21,22 @@ class ArticleDetailTableViewController: UITableViewController {
         var nib1:UINib = UINib(nibName: "ArticleTitleCustomCell", bundle: nil)
         self.tableView.registerNib(nib1, forCellReuseIdentifier: "titleCell")
         
-        var nib2:UINib = UINib(nibName: "ArticleDetailCustomCell", bundle: nil)
-        self.tableView.registerNib(nib2, forCellReuseIdentifier: "detailCell")
+        var nib2:UINib = UINib(nibName: "ArticleUserCustomCell", bundle: nil)
+        self.tableView.registerNib(nib2, forCellReuseIdentifier: "userCell")
+        
+        var nib3:UINib = UINib(nibName: "ArticleDetailCustomCell", bundle: nil)
+        self.tableView.registerNib(nib3, forCellReuseIdentifier: "detailCell")
+
         
         // セルの高さを動的に変化させるための設定
-        self.tableView.estimatedRowHeight = 10
+        self.tableView.estimatedRowHeight = 100
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+        
+        self.tableView.separatorColor = UIColor.clearColor() // tableViewの下線を消す
+        self.tableView.backgroundColor = UIColor(red: 241.0/255.0, green: 240.0/255.0, blue: 230.0/255.0, alpha: 1.0)
+        self.tableView.tableFooterView = UIView()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,15 +60,24 @@ class ArticleDetailTableViewController: UITableViewController {
         if(row == 0){
             
             var cell = tableView.dequeueReusableCellWithIdentifier("titleCell", forIndexPath: indexPath) as! ArticleTitleCustomCell
-            cell.titleLabel.text = testArray[row]
+            cell.categoryLabel.text = self.articleJson["category"].stringValue
+            cell.titleLabel.text = self.articleJson["title"].stringValue
+            cell.pageViewsLabel.text = self.articleJson["pageviews"].stringValue + "view"
+            cell.likesLabel.text = self.articleJson["likes"].stringValue + "へぇ"
             cell.layoutIfNeeded()
             return cell
-        }else{
+        }else if(row == 1) {
+            var cell = tableView.dequeueReusableCellWithIdentifier("userCell", forIndexPath: indexPath) as! ArticleUserCustomCell
+//            cell.userImageView.image = XXX
+            cell.userNameLabel.text = self.articleJson["userName"].stringValue
+            cell.layoutIfNeeded()
+            return cell
+        } else{
             var cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath) as! ArticleDetailCustomCell
-            cell.detailLabel.text = testArray[row]
+            cell.detailLabel.text = self.articleJson["detail"].stringValue
             cell.layoutIfNeeded()
             return cell
         }
-        
     }
+    
 }

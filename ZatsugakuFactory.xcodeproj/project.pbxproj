@@ -28,10 +28,10 @@
 		C452EC2B1B688EBE001B3053 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452EC2A1B688EBE001B3053 /* MyPageViewController.swift */; };
 		C46FEFE51B6BAD9F00368BA1 /* ZatsugakuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FEFE31B6BAD9F00368BA1 /* ZatsugakuTableViewController.swift */; };
 		C46FEFE61B6BAD9F00368BA1 /* ZatsugakuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46FEFE41B6BAD9F00368BA1 /* ZatsugakuTableViewController.xib */; };
-		C46FEFE91B6C54EE00368BA1 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FEFE71B6C54EE00368BA1 /* ArticleDetailViewController.swift */; };
-		C46FEFEA1B6C54EE00368BA1 /* ArticleDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46FEFE81B6C54EE00368BA1 /* ArticleDetailViewController.xib */; };
 		C472C6B61B6F500600371A97 /* ArticleTitleCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472C6B41B6F500600371A97 /* ArticleTitleCustomCell.swift */; };
 		C472C6B71B6F500600371A97 /* ArticleTitleCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C472C6B51B6F500600371A97 /* ArticleTitleCustomCell.xib */; };
+		C472C6BE1B6F603A00371A97 /* ArticleUserCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472C6BC1B6F603A00371A97 /* ArticleUserCustomCell.swift */; };
+		C472C6BF1B6F603A00371A97 /* ArticleUserCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C472C6BD1B6F603A00371A97 /* ArticleUserCustomCell.xib */; };
 		FA60C8D159E2D404F421F58C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584E72E67890DED2E0579FF0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -75,10 +75,10 @@
 		C452EC2A1B688EBE001B3053 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		C46FEFE31B6BAD9F00368BA1 /* ZatsugakuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZatsugakuTableViewController.swift; sourceTree = "<group>"; };
 		C46FEFE41B6BAD9F00368BA1 /* ZatsugakuTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZatsugakuTableViewController.xib; sourceTree = "<group>"; };
-		C46FEFE71B6C54EE00368BA1 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
-		C46FEFE81B6C54EE00368BA1 /* ArticleDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleDetailViewController.xib; sourceTree = "<group>"; };
 		C472C6B41B6F500600371A97 /* ArticleTitleCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTitleCustomCell.swift; sourceTree = "<group>"; };
 		C472C6B51B6F500600371A97 /* ArticleTitleCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleTitleCustomCell.xib; sourceTree = "<group>"; };
+		C472C6BC1B6F603A00371A97 /* ArticleUserCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleUserCustomCell.swift; sourceTree = "<group>"; };
+		C472C6BD1B6F603A00371A97 /* ArticleUserCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleUserCustomCell.xib; sourceTree = "<group>"; };
 		CC5562D6A322992128346DAD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,12 +165,12 @@
 				C46FEFE41B6BAD9F00368BA1 /* ZatsugakuTableViewController.xib */,
 				C438EDC01B6B86A700BE712E /* ZatsugakuCustomCell.swift */,
 				C438EDC11B6B86A700BE712E /* ZatsugakuCustomCell.xib */,
-				C46FEFE71B6C54EE00368BA1 /* ArticleDetailViewController.swift */,
-				C46FEFE81B6C54EE00368BA1 /* ArticleDetailViewController.xib */,
 				C420B27A1B6EEC99005B275E /* ArticleDetailTableViewController.swift */,
 				C420B27B1B6EEC99005B275E /* ArticleDetailTableViewController.xib */,
 				C472C6B41B6F500600371A97 /* ArticleTitleCustomCell.swift */,
 				C472C6B51B6F500600371A97 /* ArticleTitleCustomCell.xib */,
+				C472C6BC1B6F603A00371A97 /* ArticleUserCustomCell.swift */,
+				C472C6BD1B6F603A00371A97 /* ArticleUserCustomCell.xib */,
 				C420B27E1B6EECEB005B275E /* ArticleDetailCustomCell.swift */,
 				C420B27F1B6EECEB005B275E /* ArticleDetailCustomCell.xib */,
 				C452EC2A1B688EBE001B3053 /* MyPageViewController.swift */,
@@ -299,7 +299,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C405DA891B6896AB00ABD636 /* Info.plist in Resources */,
-				C46FEFEA1B6C54EE00368BA1 /* ArticleDetailViewController.xib in Resources */,
 				C452EC0E1B688CA7001B3053 /* Main.storyboard in Resources */,
 				C438EDC31B6B86A700BE712E /* ZatsugakuCustomCell.xib in Resources */,
 				C452EC131B688CA7001B3053 /* LaunchScreen.xib in Resources */,
@@ -307,6 +306,7 @@
 				C405DA8B1B6896AB00ABD636 /* PageMenu.xcconfig in Resources */,
 				C405DA8C1B6896AB00ABD636 /* PageMenu-Private.xcconfig in Resources */,
 				C472C6B71B6F500600371A97 /* ArticleTitleCustomCell.xib in Resources */,
+				C472C6BF1B6F603A00371A97 /* ArticleUserCustomCell.xib in Resources */,
 				C46FEFE61B6BAD9F00368BA1 /* ZatsugakuTableViewController.xib in Resources */,
 				C420B2811B6EECEB005B275E /* ArticleDetailCustomCell.xib in Resources */,
 				C452EC101B688CA7001B3053 /* Images.xcassets in Resources */,
@@ -383,10 +383,10 @@
 				C405DA881B6896AB00ABD636 /* CAPSPageMenu.swift in Sources */,
 				C405DA8D1B6896AB00ABD636 /* PageMenu-dummy.m in Sources */,
 				C420B27C1B6EEC99005B275E /* ArticleDetailTableViewController.swift in Sources */,
+				C472C6BE1B6F603A00371A97 /* ArticleUserCustomCell.swift in Sources */,
 				C46FEFE51B6BAD9F00368BA1 /* ZatsugakuTableViewController.swift in Sources */,
 				C452EC291B688E28001B3053 /* HomeViewController.swift in Sources */,
 				C438EDC21B6B86A700BE712E /* ZatsugakuCustomCell.swift in Sources */,
-				C46FEFE91B6C54EE00368BA1 /* ArticleDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

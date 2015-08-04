@@ -73,23 +73,12 @@ class ZatsugakuTableViewController: UITableViewController {
     // セルが選択されたとき
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-//        var row = indexPath.row
-//        var articleDetailVC : ArticleDetailViewController = ArticleDetailViewController(nibName: "ArticleDetailViewController", bundle: nil)
-//        
-//        articleDetailVC.title = self.articlesJson[row]["title"].stringValue
-//        articleDetailVC.articleTitle = self.articlesJson[row]["title"].stringValue
-//        articleDetailVC.pageViews = self.articlesJson[row]["pageviews"].stringValue
-//        articleDetailVC.likes = self.articlesJson[row]["likes"].stringValue
-//        articleDetailVC.userName = self.articlesJson[row]["userName"].stringValue
-//        articleDetailVC.detail = self.articlesJson[row]["detail"].stringValue
-//        
-//        self.parentNavigationController!.pushViewController(articleDetailVC, animated: true)
-        
-        
         var row = indexPath.row
         var articleDetailTVC : ArticleDetailTableViewController = ArticleDetailTableViewController(nibName: "ArticleDetailTableViewController", bundle: nil)
-        self.parentNavigationController!.pushViewController(articleDetailTVC, animated: true)
         
+        articleDetailTVC.articleJson = self.articlesJson[row]
+        
+        self.parentNavigationController!.pushViewController(articleDetailTVC, animated: true)
         
     }
     

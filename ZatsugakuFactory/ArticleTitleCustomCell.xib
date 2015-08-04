@@ -15,44 +15,58 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yC-CF-UFu">
-                        <rect key="frame" x="18" y="18" width="339" height="57"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <rect key="frame" x="81" y="23" width="276" height="32"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="777view" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXL-bd-jlv">
-                        <rect key="frame" x="262" y="81" width="43" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="777view" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXL-bd-jlv">
+                        <rect key="frame" x="259" y="81" width="45" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="43" id="KXD-6U-Lrw"/>
+                            <constraint firstAttribute="width" constant="45" id="KXD-6U-Lrw"/>
                             <constraint firstAttribute="height" constant="21" id="gdn-c5-N9V"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100へぇ" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhH-Gb-zus">
-                        <rect key="frame" x="315" y="81" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100へぇ" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhH-Gb-zus">
+                        <rect key="frame" x="307" y="81" width="50" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="42" id="nvG-sD-E8G"/>
+                            <constraint firstAttribute="width" constant="50" id="nvG-sD-E8G"/>
                             <constraint firstAttribute="height" constant="21" id="sUe-Ep-20T"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh2-LN-3m4">
+                        <rect key="frame" x="8" y="18" width="65" height="65"/>
+                        <color key="backgroundColor" red="0.82745098039215681" green="0.63921568627450975" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="65" id="Fc0-Lc-IRI"/>
+                            <constraint firstAttribute="width" constant="65" id="ND5-Xr-DYB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="YhH-Gb-zus" secondAttribute="trailing" constant="10" id="0P2-Jy-9sG"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="5yC-CF-UFu" secondAttribute="bottom" constant="30" id="NsM-eq-fPE"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="5yC-CF-UFu" secondAttribute="trailing" constant="10" id="QFk-SW-nll"/>
-                    <constraint firstItem="5yC-CF-UFu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Qrd-6O-7bk"/>
+                    <constraint firstItem="5yC-CF-UFu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="2nW-ZR-xSP"/>
+                    <constraint firstItem="Nh2-LN-3m4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="BST-EV-V7p"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5yC-CF-UFu" secondAttribute="trailing" constant="10" id="CED-bK-ZJl"/>
+                    <constraint firstItem="5yC-CF-UFu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="73" id="FDf-HE-ncZ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="YhH-Gb-zus" secondAttribute="bottom" constant="3" id="Wt1-Kv-H7x"/>
-                    <constraint firstItem="YhH-Gb-zus" firstAttribute="leading" secondItem="NXL-bd-jlv" secondAttribute="trailing" constant="10" id="biF-0P-Bin"/>
+                    <constraint firstItem="YhH-Gb-zus" firstAttribute="leading" secondItem="NXL-bd-jlv" secondAttribute="trailing" constant="3" id="biF-0P-Bin"/>
+                    <constraint firstItem="Nh2-LN-3m4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="eof-Vt-Sjj"/>
                     <constraint firstAttribute="bottomMargin" secondItem="NXL-bd-jlv" secondAttribute="bottom" constant="3" id="oV2-rU-DnB"/>
-                    <constraint firstItem="5yC-CF-UFu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="xJr-uC-ziX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="5yC-CF-UFu" secondAttribute="bottom" constant="50" id="ohg-98-g5A"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="categoryLabel" destination="Nh2-LN-3m4" id="GQP-v3-7lc"/>
                 <outlet property="likesLabel" destination="YhH-Gb-zus" id="YIS-2f-fIa"/>
                 <outlet property="pageViewsLabel" destination="NXL-bd-jlv" id="qHu-Fj-MWn"/>
                 <outlet property="titleLabel" destination="5yC-CF-UFu" id="cMJ-08-UDT"/>

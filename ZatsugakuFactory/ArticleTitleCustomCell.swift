@@ -10,6 +10,7 @@ import UIKit
 
 class ArticleTitleCustomCell: UITableViewCell {
 
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var pageViewsLabel: UILabel!
@@ -18,6 +19,11 @@ class ArticleTitleCustomCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
+        // UIに角丸を適用する
+        self.categoryLabel.layer.cornerRadius = 3
+        self.categoryLabel.layer.masksToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

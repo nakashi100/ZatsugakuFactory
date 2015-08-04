@@ -1,5 +1,5 @@
 //
-//  ArticleTitleCustomCell.swift
+//  ArticleUserCustomCell.swift
 //  ZatsugakuFactory
 //
 //  Created by Tomohide Nakashima on 2015/08/03.
@@ -10,6 +10,8 @@ import UIKit
 
 class ArticleUserCustomCell: UITableViewCell {
 
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
