@@ -26,6 +26,7 @@
 		C452EC1F1B688CA7001B3053 /* ZatsugakuFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452EC1E1B688CA7001B3053 /* ZatsugakuFactoryTests.swift */; };
 		C452EC291B688E28001B3053 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452EC281B688E28001B3053 /* HomeViewController.swift */; };
 		C452EC2B1B688EBE001B3053 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452EC2A1B688EBE001B3053 /* MyPageViewController.swift */; };
+		C458DC7F1B7128D1007CB397 /* black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C458DC7E1B7128D1007CB397 /* black.jpg */; };
 		C46FEFE51B6BAD9F00368BA1 /* ZatsugakuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FEFE31B6BAD9F00368BA1 /* ZatsugakuTableViewController.swift */; };
 		C46FEFE61B6BAD9F00368BA1 /* ZatsugakuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46FEFE41B6BAD9F00368BA1 /* ZatsugakuTableViewController.xib */; };
 		C472C6B61B6F500600371A97 /* ArticleTitleCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472C6B41B6F500600371A97 /* ArticleTitleCustomCell.swift */; };
@@ -73,6 +74,7 @@
 		C452EC1E1B688CA7001B3053 /* ZatsugakuFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZatsugakuFactoryTests.swift; sourceTree = "<group>"; };
 		C452EC281B688E28001B3053 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C452EC2A1B688EBE001B3053 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		C458DC7E1B7128D1007CB397 /* black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black.jpg; sourceTree = "<group>"; };
 		C46FEFE31B6BAD9F00368BA1 /* ZatsugakuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZatsugakuTableViewController.swift; sourceTree = "<group>"; };
 		C46FEFE41B6BAD9F00368BA1 /* ZatsugakuTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZatsugakuTableViewController.xib; sourceTree = "<group>"; };
 		C472C6B41B6F500600371A97 /* ArticleTitleCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTitleCustomCell.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		C452EC041B688CA7001B3053 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C458DC7E1B7128D1007CB397 /* black.jpg */,
 				C452EC051B688CA7001B3053 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -302,6 +305,7 @@
 				C452EC0E1B688CA7001B3053 /* Main.storyboard in Resources */,
 				C438EDC31B6B86A700BE712E /* ZatsugakuCustomCell.xib in Resources */,
 				C452EC131B688CA7001B3053 /* LaunchScreen.xib in Resources */,
+				C458DC7F1B7128D1007CB397 /* black.jpg in Resources */,
 				C420B27D1B6EEC99005B275E /* ArticleDetailTableViewController.xib in Resources */,
 				C405DA8B1B6896AB00ABD636 /* PageMenu.xcconfig in Resources */,
 				C405DA8C1B6896AB00ABD636 /* PageMenu-Private.xcconfig in Resources */,

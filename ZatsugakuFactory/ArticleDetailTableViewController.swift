@@ -34,7 +34,7 @@ class ArticleDetailTableViewController: UITableViewController {
         
         
         self.tableView.separatorColor = UIColor.clearColor() // tableViewの下線を消す
-        self.tableView.backgroundColor = UIColor(red: 241.0/255.0, green: 240.0/255.0, blue: 230.0/255.0, alpha: 1.0)
+//        self.tableView.backgroundColor = UIColor(red: 241.0/255.0, green: 240.0/255.0, blue: 230.0/255.0, alpha: 1.0)
         self.tableView.tableFooterView = UIView()
         
     }
@@ -68,7 +68,16 @@ class ArticleDetailTableViewController: UITableViewController {
             return cell
         }else if(row == 1) {
             var cell = tableView.dequeueReusableCellWithIdentifier("userCell", forIndexPath: indexPath) as! ArticleUserCustomCell
-//            cell.userImageView.image = XXX
+            var userId = self.articleJson["userId"].stringValue
+            
+            var myURL = NSURL(string: "http://nakashi100.main.jp/zatsugaku_platform/app/webroot/upload/users/\(userId)/user\(userId)_mini.jpg")
+            var myData = NSData(contentsOfURL: myURL!)
+            if (myData != nil){
+                var myImage = UIImage(data: myData!)
+                cell.userImageView.image = myImage
+            } else {
+                cell.userImageView.image = UIImage(named: "black.jpg")
+            }
             cell.userNameLabel.text = self.articleJson["userName"].stringValue
             cell.layoutIfNeeded()
             return cell

@@ -85,7 +85,7 @@ class ZatsugakuTableViewController: UITableViewController {
     
     // データをjson形式で取得するメソッド
     func getArticlesJson() {
-        Alamofire.request(.GET, "http://192.168.33.13/zatsugaku_platform/Articles/json_data/\(self.categoryId!)") // あとで本番環境のURLに変更する
+        Alamofire.request(.GET, "http://nakashi100.main.jp/zatsugaku_platform/Articles/json_data/\(self.categoryId!)") // あとで本番環境のURLに変更する
             .responseJSON { (request, response, json, error) in
                 
                 if(error != nil) {

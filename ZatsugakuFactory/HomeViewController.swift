@@ -15,7 +15,7 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "雑学ファクトリー"
+        self.navigationItem.title = "雑学ファクトリー"        
         createPageMenu()
     }
 
