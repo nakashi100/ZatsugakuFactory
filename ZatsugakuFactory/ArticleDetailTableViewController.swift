@@ -34,9 +34,10 @@ class ArticleDetailTableViewController: UITableViewController {
         
         
         self.tableView.separatorColor = UIColor.clearColor() // tableViewの下線を消す
-//        self.tableView.backgroundColor = UIColor(red: 241.0/255.0, green: 240.0/255.0, blue: 230.0/255.0, alpha: 1.0)
         self.tableView.tableFooterView = UIView()
         
+        // セルの選択を禁止する
+        self.tableView.allowsSelection = false
     }
 
     override func didReceiveMemoryWarning() {

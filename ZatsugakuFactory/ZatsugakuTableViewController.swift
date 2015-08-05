@@ -80,6 +80,9 @@ class ZatsugakuTableViewController: UITableViewController {
         
         self.parentNavigationController!.pushViewController(articleDetailTVC, animated: true)
         
+        // セルの選択状態を解除する
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
     }
     
     
@@ -107,5 +110,6 @@ class ZatsugakuTableViewController: UITableViewController {
         getArticlesJson()
         self.refreshCL.endRefreshing()
     }
+    
     
 }
