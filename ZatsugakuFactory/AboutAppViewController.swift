@@ -12,16 +12,33 @@ class AboutAppViewController: UIViewController {
 
     @IBOutlet weak var aboutLabel: UITextView!
     
+    @IBOutlet weak var urlTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
         
-        // URLが含まれているテキストを用意
-        let text = "ダウンロードありがとうございます。\n\nこのアプリはユーザー同士で雑学をシェアするWebサービス「雑学ファクトリー(http://zatsugaku-factory.xyz)」の閲覧専用アプリです。\n\n雑学の「投稿」「検索」「お気に入り登録」などは上記URLにアクセスしていただき、会員登録をしてご利用ください。\n\nなお本ver1.0では雑学の「閲覧」のみ可能ですが、今後のアップデートにより「投稿」「検索」「お気に入り登録」などの機能を追加予定です。\n\n雑学ファクトリーをお楽しみください。"
+//        let text = "ダウンロードありがとうございます。\n\nこのアプリはユーザー同士で雑学をシェアするWebサービス「雑学ファクトリー(http://zatsugaku-factory.xyz)」の閲覧専用アプリです。\n\n雑学の「投稿」「検索」「お気に入り登録」などはWeb版にアクセスしていただき、会員登録をしてご利用ください。\n\nなお本ver1.0では雑学の「閲覧」のみ可能ですが、今後のアップデートにより「投稿」「検索」「お気に入り登録」などの機能を追加予定です。\n\n雑学ファクトリーをお楽しみください。"
+//        
+//        self.aboutLabel.text = text
         
-        self.aboutLabel.text = text
+        
+        self.urlTextView.dataDetectorTypes = .Link  // リンクの検知を有効にする
+        // html ダブルクォーテーションは\でエスケープする
+        let htmlText = "<a href=\"http://zatsugaku-factory.xyz\">Web版「雑学ファクトリー」</a>"
+        
+        // UTF8でエンコード
+        let htmlData = htmlText.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion:true)!
+        
+        // ドキュメントタイプにHTMLを指定する
+        let options:[NSObject:AnyObject] = [NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute:NSUTF8StringEncoding]
+        
+        // AttributedStringの作成
+        let attributedText = NSAttributedString(data: htmlData, options: options, documentAttributes: nil, error: nil)
+        
+        // 作成したAttributedStringをtextViewにセット
+        self.urlTextView.attributedText = attributedText
     }
 
     override func didReceiveMemoryWarning() {
