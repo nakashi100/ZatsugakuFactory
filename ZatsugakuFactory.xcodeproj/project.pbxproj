@@ -33,6 +33,7 @@
 		C472C6B71B6F500600371A97 /* ArticleTitleCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C472C6B51B6F500600371A97 /* ArticleTitleCustomCell.xib */; };
 		C472C6BE1B6F603A00371A97 /* ArticleUserCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472C6BC1B6F603A00371A97 /* ArticleUserCustomCell.swift */; };
 		C472C6BF1B6F603A00371A97 /* ArticleUserCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C472C6BD1B6F603A00371A97 /* ArticleUserCustomCell.xib */; };
+		C4A555B11B75BEC900329A6E /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = C4A555B01B75BEC900329A6E /* user.png */; };
 		C4C832331B72050D00CA4FC5 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C832321B72050D00CA4FC5 /* AboutAppViewController.swift */; };
 		FA60C8D159E2D404F421F58C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584E72E67890DED2E0579FF0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		C472C6B51B6F500600371A97 /* ArticleTitleCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleTitleCustomCell.xib; sourceTree = "<group>"; };
 		C472C6BC1B6F603A00371A97 /* ArticleUserCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleUserCustomCell.swift; sourceTree = "<group>"; };
 		C472C6BD1B6F603A00371A97 /* ArticleUserCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleUserCustomCell.xib; sourceTree = "<group>"; };
+		C4A555B01B75BEC900329A6E /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		C4C832321B72050D00CA4FC5 /* AboutAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		CC5562D6A322992128346DAD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +192,7 @@
 		C452EC041B688CA7001B3053 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C4A555B01B75BEC900329A6E /* user.png */,
 				C458DC7E1B7128D1007CB397 /* black.jpg */,
 				C452EC051B688CA7001B3053 /* Info.plist */,
 			);
@@ -309,6 +312,7 @@
 				C452EC0E1B688CA7001B3053 /* Main.storyboard in Resources */,
 				C438EDC31B6B86A700BE712E /* ZatsugakuCustomCell.xib in Resources */,
 				C452EC131B688CA7001B3053 /* LaunchScreen.xib in Resources */,
+				C4A555B11B75BEC900329A6E /* user.png in Resources */,
 				C458DC7F1B7128D1007CB397 /* black.jpg in Resources */,
 				C420B27D1B6EEC99005B275E /* ArticleDetailTableViewController.xib in Resources */,
 				C405DA8B1B6896AB00ABD636 /* PageMenu.xcconfig in Resources */,

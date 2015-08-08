@@ -12,6 +12,8 @@ import SwiftyJSON
 class ArticleDetailTableViewController: UITableViewController {
     
     var articleJson : JSON = []
+    var userPicData : NSData?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,7 @@ class ArticleDetailTableViewController: UITableViewController {
         
         // セルの選択を禁止する
         self.tableView.allowsSelection = false
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,7 +74,7 @@ class ArticleDetailTableViewController: UITableViewController {
             case 1:
                 var cell = tableView.dequeueReusableCellWithIdentifier("userCell", forIndexPath: indexPath) as! ArticleUserCustomCell
                 cell.userNameLabel.text = self.articleJson["userName"].stringValue
-                cell.userImageView.image = UIImage(named: "black.jpg")
+                cell.userImageView.image = UIImage(named: "user.png")
                 cell.layoutIfNeeded()
                 return cell
             case 2:
