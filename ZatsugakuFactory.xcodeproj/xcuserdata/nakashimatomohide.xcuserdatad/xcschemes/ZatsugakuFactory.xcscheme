@@ -107,6 +107,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "ZatsugakuFactory"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

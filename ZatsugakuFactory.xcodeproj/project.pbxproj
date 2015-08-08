@@ -532,7 +532,7 @@
 				INFOPLIST_FILE = ZatsugakuFactory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "dd01843b-ebc8-47e7-a284-1bee772afe63";
 			};
 			name = Debug;
 		};
@@ -541,12 +541,12 @@
 			baseConfigurationReference = CC5562D6A322992128346DAD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tomohide Nakashima (MKFY78BFZP)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ZatsugakuFactory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "dd01843b-ebc8-47e7-a284-1bee772afe63";
 			};
 			name = Release;
 		};
