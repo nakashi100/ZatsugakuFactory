@@ -29,8 +29,8 @@ class ArticleDetailTableViewController: UITableViewController {
 
         
         // セルの高さを動的に変化させるための設定
-        self.tableView.estimatedRowHeight = 100
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         
         self.tableView.separatorColor = UIColor.clearColor() // tableViewの下線を消す
@@ -58,36 +58,60 @@ class ArticleDetailTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var row = indexPath.row
         
-        if(row == 0){
-            
-            var cell = tableView.dequeueReusableCellWithIdentifier("titleCell", forIndexPath: indexPath) as! ArticleTitleCustomCell
-            cell.categoryLabel.text = self.articleJson["category"].stringValue
-            cell.titleLabel.text = self.articleJson["title"].stringValue
-            cell.pageViewsLabel.text = self.articleJson["pageviews"].stringValue + "view"
-            cell.likesLabel.text = self.articleJson["likes"].stringValue + "へぇ"
-            cell.layoutIfNeeded()
-            return cell
-        }else if(row == 1) {
-            var cell = tableView.dequeueReusableCellWithIdentifier("userCell", forIndexPath: indexPath) as! ArticleUserCustomCell
-            var userId = self.articleJson["userId"].stringValue
-            
-            var myURL = NSURL(string: "http://nakashi100.main.jp/zatsugaku_platform/app/webroot/upload/users/\(userId)/user\(userId)_mini.jpg")
-            var myData = NSData(contentsOfURL: myURL!)
-            if (myData != nil){
-                var myImage = UIImage(data: myData!)
-                cell.userImageView.image = myImage
-            } else {
+        
+        switch row {
+            case 0:
+                var cell = tableView.dequeueReusableCellWithIdentifier("titleCell", forIndexPath: indexPath) as! ArticleTitleCustomCell
+                cell.categoryLabel.text = self.articleJson["category"].stringValue
+                cell.titleLabel.text = self.articleJson["title"].stringValue
+                cell.pageViewsLabel.text = self.articleJson["pageviews"].stringValue + "view"
+                cell.likesLabel.text = self.articleJson["likes"].stringValue + "へぇ"
+                cell.layoutIfNeeded()
+                return cell
+            case 1:
+                var cell = tableView.dequeueReusableCellWithIdentifier("userCell", forIndexPath: indexPath) as! ArticleUserCustomCell
+                cell.userNameLabel.text = self.articleJson["userName"].stringValue
                 cell.userImageView.image = UIImage(named: "black.jpg")
-            }
-            cell.userNameLabel.text = self.articleJson["userName"].stringValue
-            cell.layoutIfNeeded()
-            return cell
-        } else{
-            var cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath) as! ArticleDetailCustomCell
-            cell.detailLabel.text = self.articleJson["detail"].stringValue
-            cell.layoutIfNeeded()
-            return cell
+                cell.layoutIfNeeded()
+                return cell
+            case 2:
+                var cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath) as! ArticleDetailCustomCell
+                cell.detailLabel.text = self.articleJson["detail"].stringValue
+                cell.layoutIfNeeded()
+                return cell
+            default:
+                var cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath) as! ArticleDetailCustomCell
+                return cell
         }
+        
+//        if(row == 0){
+//            var cell = tableView.dequeueReusableCellWithIdentifier("titleCell", forIndexPath: indexPath) as! ArticleTitleCustomCell
+//            cell.categoryLabel.text = self.articleJson["category"].stringValue
+//            cell.titleLabel.text = self.articleJson["title"].stringValue
+//            cell.pageViewsLabel.text = self.articleJson["pageviews"].stringValue + "view"
+//            cell.likesLabel.text = self.articleJson["likes"].stringValue + "へぇ"
+//            cell.layoutIfNeeded()
+//            return cell
+//        }else if(row == 1) {
+//            var cell = tableView.dequeueReusableCellWithIdentifier("userCell", forIndexPath: indexPath) as! ArticleUserCustomCell
+//            var userId = self.articleJson["userId"].stringValue
+//            
+//            var myURL = NSURL(string: "http://nakashi100.main.jp/zatsugaku_platform/app/webroot/upload/users/\(userId)/user\(userId)_mini.jpg")
+//            var myData = NSData(contentsOfURL: myURL!)
+//            if (myData != nil){
+//                var myImage = UIImage(data: myData!)
+//                cell.userImageView.image = myImage
+//            } else {
+//                cell.userImageView.image = UIImage(named: "black.jpg")
+//            }
+//            cell.userNameLabel.text = self.articleJson["userName"].stringValue
+//            cell.layoutIfNeeded()
+//            return cell
+//        }else {
+//            var cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath) as! ArticleDetailCustomCell
+//            cell.detailLabel.text = self.articleJson["detail"].stringValue
+//            cell.layoutIfNeeded()
+//            return cell
+//        }
     }
-    
 }

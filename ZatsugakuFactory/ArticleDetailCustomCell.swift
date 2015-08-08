@@ -12,7 +12,6 @@ class ArticleDetailCustomCell: UITableViewCell {
     
     @IBOutlet weak var detailLabel: UILabel!
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,5 +22,5 @@ class ArticleDetailCustomCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

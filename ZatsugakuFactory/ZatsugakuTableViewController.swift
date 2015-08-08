@@ -82,7 +82,6 @@ class ZatsugakuTableViewController: UITableViewController {
         
         // セルの選択状態を解除する
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
     }
     
     
